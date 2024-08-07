@@ -21,10 +21,15 @@ struct CardContentView: View {
                 ActionListView(isInTheShopList: foodProduct.isInTheShopList, isFavorite: foodProduct.isFavorite)
             }
             Spacer()
-            HStack() {
-                PriceView(foodProductPrice: foodProduct.price, foodProductOldPrice: foodProduct.oldPrice)
-                Spacer()
-                AddToCartButtonView()
+            if foodProduct.isSoldByWeight {
+                QuantityTypePickerView()
+                QuantityPickerView()
+            } else {
+                HStack() {
+                    PriceView(foodProductPrice: foodProduct.price, foodProductOldPrice: foodProduct.oldPrice)
+                    Spacer()
+                    AddToCartButtonView()
+                }
             }
         }
         .frame(maxWidth: .infinity, maxHeight: 144)

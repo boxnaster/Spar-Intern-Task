@@ -22,6 +22,9 @@
 		C7104B8A2C6400A400F87034 /* CardContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7104B892C6400A400F87034 /* CardContentView.swift */; };
 		C7104B8D2C641ADA00F87034 /* BadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7104B8C2C641ADA00F87034 /* BadgeView.swift */; };
 		C7104B8F2C641B7600F87034 /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7104B8E2C641B7600F87034 /* Badge.swift */; };
+		C7104B912C6424AE00F87034 /* QuantityTypePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7104B902C6424AE00F87034 /* QuantityTypePickerView.swift */; };
+		C7104B932C64278D00F87034 /* QuantityPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7104B922C64278D00F87034 /* QuantityPickerView.swift */; };
+		C7104B952C642E2F00F87034 /* QuantityType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7104B942C642E2F00F87034 /* QuantityType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +44,9 @@
 		C7104B892C6400A400F87034 /* CardContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardContentView.swift; sourceTree = "<group>"; };
 		C7104B8C2C641ADA00F87034 /* BadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeView.swift; sourceTree = "<group>"; };
 		C7104B8E2C641B7600F87034 /* Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
+		C7104B902C6424AE00F87034 /* QuantityTypePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuantityTypePickerView.swift; sourceTree = "<group>"; };
+		C7104B922C64278D00F87034 /* QuantityPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuantityPickerView.swift; sourceTree = "<group>"; };
+		C7104B942C642E2F00F87034 /* QuantityType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuantityType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +101,7 @@
 			children = (
 				C7104B782C63A37100F87034 /* FoodProduct.swift */,
 				C7104B8E2C641B7600F87034 /* Badge.swift */,
+				C7104B942C642E2F00F87034 /* QuantityType.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -112,6 +119,8 @@
 				C7104B872C64004900F87034 /* CardImageView.swift */,
 				C7104B892C6400A400F87034 /* CardContentView.swift */,
 				C7104B8C2C641ADA00F87034 /* BadgeView.swift */,
+				C7104B902C6424AE00F87034 /* QuantityTypePickerView.swift */,
+				C7104B922C64278D00F87034 /* QuantityPickerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -189,15 +198,18 @@
 				C7104B8D2C641ADA00F87034 /* BadgeView.swift in Sources */,
 				C7104B882C64004900F87034 /* CardImageView.swift in Sources */,
 				C7104B802C63FD0900F87034 /* DescriptionView.swift in Sources */,
+				C7104B912C6424AE00F87034 /* QuantityTypePickerView.swift in Sources */,
 				C7104B842C63FE2500F87034 /* PriceView.swift in Sources */,
 				C7104B7C2C63A92B00F87034 /* FoodCardView.swift in Sources */,
 				C7104B822C63FDAD00F87034 /* ActionListView.swift in Sources */,
 				C7104B682C62439F00F87034 /* ContentView.swift in Sources */,
 				C7104B7E2C63FBF100F87034 /* RatingView.swift in Sources */,
+				C7104B932C64278D00F87034 /* QuantityPickerView.swift in Sources */,
 				C7104B862C63FF5C00F87034 /* AddToCartButtonView.swift in Sources */,
 				C7104B792C63A37100F87034 /* FoodProduct.swift in Sources */,
 				C7104B8A2C6400A400F87034 /* CardContentView.swift in Sources */,
 				C7104B8F2C641B7600F87034 /* Badge.swift in Sources */,
+				C7104B952C642E2F00F87034 /* QuantityType.swift in Sources */,
 				C7104B662C62439F00F87034 /* Spar_Intern_TaskApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

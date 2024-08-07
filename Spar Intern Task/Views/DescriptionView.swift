@@ -10,7 +10,7 @@ import SwiftUI
 struct DescriptionView: View {
 
     let foodProductName: String
-    let foodProductCountry: String
+    let foodProductCountry: String?
 
     var body: some View {
         VStack(alignment: .leading) {
@@ -18,10 +18,12 @@ struct DescriptionView: View {
                 .font(.system(size: 12))
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.vertical, 2)
-            Text(foodProductCountry)
-                .font(.system(size: 12))
-                .foregroundStyle(.gray)
-                .frame(maxWidth: .infinity, alignment: .leading)
+            if let country = foodProductCountry {
+                Text(country)
+                    .font(.system(size: 12))
+                    .foregroundStyle(.gray)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+            }
         }
         .frame(maxWidth: .infinity)
     }
