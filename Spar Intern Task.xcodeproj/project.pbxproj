@@ -12,7 +12,14 @@
 		C7104B6A2C6243A000F87034 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7104B692C6243A000F87034 /* Assets.xcassets */; };
 		C7104B6D2C6243A000F87034 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7104B6C2C6243A000F87034 /* Preview Assets.xcassets */; };
 		C7104B792C63A37100F87034 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7104B782C63A37100F87034 /* Food.swift */; };
-		C7104B7C2C63A92B00F87034 /* FoodListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7104B7B2C63A92B00F87034 /* FoodListCell.swift */; };
+		C7104B7C2C63A92B00F87034 /* FoodCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7104B7B2C63A92B00F87034 /* FoodCardView.swift */; };
+		C7104B7E2C63FBF100F87034 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7104B7D2C63FBF100F87034 /* RatingView.swift */; };
+		C7104B802C63FD0900F87034 /* DescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7104B7F2C63FD0900F87034 /* DescriptionView.swift */; };
+		C7104B822C63FDAD00F87034 /* ActionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7104B812C63FDAD00F87034 /* ActionListView.swift */; };
+		C7104B842C63FE2500F87034 /* PriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7104B832C63FE2500F87034 /* PriceView.swift */; };
+		C7104B862C63FF5C00F87034 /* AddToCartButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7104B852C63FF5C00F87034 /* AddToCartButtonView.swift */; };
+		C7104B882C64004900F87034 /* CardImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7104B872C64004900F87034 /* CardImageView.swift */; };
+		C7104B8A2C6400A400F87034 /* CardContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7104B892C6400A400F87034 /* CardContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,7 +29,14 @@
 		C7104B692C6243A000F87034 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C7104B6C2C6243A000F87034 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C7104B782C63A37100F87034 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
-		C7104B7B2C63A92B00F87034 /* FoodListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListCell.swift; sourceTree = "<group>"; };
+		C7104B7B2C63A92B00F87034 /* FoodCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCardView.swift; sourceTree = "<group>"; };
+		C7104B7D2C63FBF100F87034 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
+		C7104B7F2C63FD0900F87034 /* DescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionView.swift; sourceTree = "<group>"; };
+		C7104B812C63FDAD00F87034 /* ActionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionListView.swift; sourceTree = "<group>"; };
+		C7104B832C63FE2500F87034 /* PriceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceView.swift; sourceTree = "<group>"; };
+		C7104B852C63FF5C00F87034 /* AddToCartButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToCartButtonView.swift; sourceTree = "<group>"; };
+		C7104B872C64004900F87034 /* CardImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardImageView.swift; sourceTree = "<group>"; };
+		C7104B892C6400A400F87034 /* CardContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +74,7 @@
 				C7104B692C6243A000F87034 /* Assets.xcassets */,
 				C7104B6B2C6243A000F87034 /* Preview Content */,
 				C7104B7A2C63A37600F87034 /* Models */,
-				C7104B7B2C63A92B00F87034 /* FoodListCell.swift */,
+				C7104B8B2C64012F00F87034 /* Views */,
 			);
 			path = "Spar Intern Task";
 			sourceTree = "<group>";
@@ -79,6 +93,21 @@
 				C7104B782C63A37100F87034 /* Food.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		C7104B8B2C64012F00F87034 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C7104B7B2C63A92B00F87034 /* FoodCardView.swift */,
+				C7104B7D2C63FBF100F87034 /* RatingView.swift */,
+				C7104B7F2C63FD0900F87034 /* DescriptionView.swift */,
+				C7104B812C63FDAD00F87034 /* ActionListView.swift */,
+				C7104B832C63FE2500F87034 /* PriceView.swift */,
+				C7104B852C63FF5C00F87034 /* AddToCartButtonView.swift */,
+				C7104B872C64004900F87034 /* CardImageView.swift */,
+				C7104B892C6400A400F87034 /* CardContentView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,9 +180,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C7104B7C2C63A92B00F87034 /* FoodListCell.swift in Sources */,
+				C7104B882C64004900F87034 /* CardImageView.swift in Sources */,
+				C7104B802C63FD0900F87034 /* DescriptionView.swift in Sources */,
+				C7104B842C63FE2500F87034 /* PriceView.swift in Sources */,
+				C7104B7C2C63A92B00F87034 /* FoodCardView.swift in Sources */,
+				C7104B822C63FDAD00F87034 /* ActionListView.swift in Sources */,
 				C7104B682C62439F00F87034 /* ContentView.swift in Sources */,
+				C7104B7E2C63FBF100F87034 /* RatingView.swift in Sources */,
+				C7104B862C63FF5C00F87034 /* AddToCartButtonView.swift in Sources */,
 				C7104B792C63A37100F87034 /* Food.swift in Sources */,
+				C7104B8A2C6400A400F87034 /* CardContentView.swift in Sources */,
 				C7104B662C62439F00F87034 /* Spar_Intern_TaskApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

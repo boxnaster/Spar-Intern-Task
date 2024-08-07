@@ -17,7 +17,9 @@ struct ContentView: View {
             List {
                 Section {
                     ForEach(food) { food in
-                        FoodListCell(food: food)
+                        FoodCardView(food: food)
+                            .listRowSeparator(.visible)
+                            .listRowSeparatorTint(.gray)
                     }
                 }
             }
@@ -26,7 +28,7 @@ struct ContentView: View {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button(action: {
                         listContentStyle.toggle()
-                        //change the list style
+                        //TODO: change the list style
                     }, label: {
                         ZStack {
                             RoundedRectangle(cornerRadius: 10)
@@ -38,7 +40,6 @@ struct ContentView: View {
                 }
             })
         }
-        
     }
 }
 
