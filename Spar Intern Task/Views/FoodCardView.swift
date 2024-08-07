@@ -8,16 +8,17 @@
 import SwiftUI
 
 struct FoodCardView: View {
-    let food: Food
+    
+    let foodProduct: FoodProduct
     
     var body: some View {
         HStack {
-            CardImageView(food: food)
-            CardContentView(food: food)
+            CardImageView(foodProductImage: foodProduct.image, foodProductDiscount: foodProduct.discountInPercent,  foodProductBadge: foodProduct.badge)
+            CardContentView(foodProduct: foodProduct)
         }
     }
 }
 
 #Preview {
-    FoodCardView(food: Food.getExamples()[2])
+    FoodCardView(foodProduct: FoodProduct.getExamples()[2])
 }

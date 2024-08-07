@@ -9,26 +9,21 @@ import SwiftUI
 
 struct CardImageView: View {
 
-    let food: Food
+    let foodProductImage: Image
+    let foodProductDiscount: Int?
+    let foodProductBadge: Badge?
 
     var body: some View {
         ZStack {
-            food.image
+            foodProductImage
 
-            if food.isHitThePrice {
-                Image("hit_the_price")
+            if let badge = foodProductBadge {
+                BadgeView(badge: badge)
                     .frame(maxWidth: 144, maxHeight: .infinity, alignment: .topLeading)
             }
-            if food.isNew {
-                Image("new")
-                    .frame(maxWidth: 144, maxHeight: .infinity, alignment: .topLeading)
-            }
-            if food.isPriceWithCard {
-                Image("price_with_card")
-                    .frame(maxWidth: 144, maxHeight: .infinity, alignment: .topLeading)
-            }
-            if food.discountInPercent > 0 {
-                Text("\(food.discountInPercent)%")
+
+            if let discount = foodProductDiscount {
+                Text("\(discount)%")
                     .foregroundStyle(.red)
                     .bold()
                     .frame(maxWidth: 144, maxHeight: .infinity, alignment: .bottomTrailing)
@@ -39,5 +34,5 @@ struct CardImageView: View {
 }
 
 #Preview {
-    CardImageView(food: Food.getExamples()[0])
+    CardImageView(foodProductImage: FoodProduct.getExamples()[0].image, foodProductDiscount: FoodProduct.getExamples()[0].discountInPercent, foodProductBadge: FoodProduct.getExamples()[0].badge)
 }

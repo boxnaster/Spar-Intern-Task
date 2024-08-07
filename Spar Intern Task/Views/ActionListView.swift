@@ -9,21 +9,22 @@ import SwiftUI
 
 struct ActionListView: View {
 
-    let food: Food
+    let isInTheShopList: Bool
+    let isFavorite: Bool
 
     var body: some View {
         VStack {
             Button(action: {
                 //TODO: add the item to the shop list
             }, label: {
-                Image(food.isInTheShopList ? "shop_list.fill" : "shop_list")
+                Image(isInTheShopList ? "shop_list.fill" : "shop_list")
 
             })
             .frame(width: 32, height: 32)
             Button(action: {
                 //TODO: add the item to favorites
             }, label: {
-                Image(food.isFavorite ? "favorite.fill" : "favorite")
+                Image(isFavorite ? "favorite.fill" : "favorite")
 
             })
             .frame(width: 32, height: 32)
@@ -32,5 +33,5 @@ struct ActionListView: View {
 }
 
 #Preview {
-    ActionListView(food: Food.getExamples()[0])
+    ActionListView(isInTheShopList: FoodProduct.getExamples()[0].isInTheShopList, isFavorite: FoodProduct.getExamples()[0].isFavorite)
 }

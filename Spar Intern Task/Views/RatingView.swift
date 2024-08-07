@@ -8,15 +8,16 @@
 import SwiftUI
 
 struct RatingView: View {
-
-    let food: Food
+    
+    let foodProductRating: Float
+    let foodProductReviewsCount: Int
 
     var body: some View {
         HStack() {
             Image("rating")
-            Text(String(format: "%.1f", food.raiting))
+            Text(String(format: "%.1f", foodProductRating))
                 .font(.system(size: 12))
-            Text("| \(food.reviewsCount) отзывов")
+            Text("| \(foodProductReviewsCount) отзывов")
                 .font(.system(size: 12))
                 .foregroundStyle(.gray)
         }
@@ -24,5 +25,5 @@ struct RatingView: View {
 }
 
 #Preview {
-    RatingView(food: Food.getExamples()[0])
+    RatingView(foodProductRating: FoodProduct.getExamples()[0].raiting, foodProductReviewsCount: FoodProduct.getExamples()[0].reviewsCount)
 }

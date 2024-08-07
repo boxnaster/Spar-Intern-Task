@@ -9,15 +9,15 @@ import SwiftUI
 
 struct ContentView: View {
 
-    @State private var food = Food.getExamples()
+    @State private var foodProducts = FoodProduct.getExamples()
     @State private var listContentStyle = true
 
     var body: some View {
         NavigationView {
             List {
                 Section {
-                    ForEach(food) { food in
-                        FoodCardView(food: food)
+                    ForEach(foodProducts) { product in
+                        FoodCardView(foodProduct: product)
                             .listRowSeparator(.visible)
                             .listRowSeparatorTint(.gray)
                     }
@@ -33,7 +33,7 @@ struct ContentView: View {
                         ZStack {
                             RoundedRectangle(cornerRadius: 10)
                                 .frame(width: 36, height: 36)
-                                .foregroundColor(Color(red: 241, green: 241, blue: 241))
+                                .foregroundColor(Color(red: 241/255, green: 241/255, blue: 241/255))
                             Image("list_view")
                         }
                     })

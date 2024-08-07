@@ -9,17 +9,18 @@ import SwiftUI
 
 struct PriceView: View {
     
-    let food: Food
-    
+    let foodProductPrice: Float
+    let foodProductOldPrice: Float?
+
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
-                Text(String(format: "%.2f", food.price))
+                Text(String(format: "%.2f", foodProductPrice))
                     .font(.system(size: 20))
                     .bold()
                 Image("per_amount")
             }
-            if let oldPrice = food.oldPrice {
+            if let oldPrice = foodProductOldPrice {
                 Text(String(format: "%.2f", oldPrice))
                     .strikethrough()
                     .font(.system(size: 12))
@@ -30,5 +31,5 @@ struct PriceView: View {
 }
 
 #Preview {
-    PriceView(food: Food.getExamples()[0])
+    PriceView(foodProductPrice: FoodProduct.getExamples()[0].price, foodProductOldPrice: FoodProduct.getExamples()[0].oldPrice)
 }

@@ -9,14 +9,16 @@ import SwiftUI
 
 struct DescriptionView: View {
 
-    let food: Food
+    let foodProductName: String
+    let foodProductCountry: String
 
     var body: some View {
         VStack(alignment: .leading) {
-            Text(food.name)
+            Text(foodProductName)
                 .font(.system(size: 12))
                 .frame(maxWidth: .infinity, alignment: .leading)
-            Text(food.country)
+                .padding(.vertical, 2)
+            Text(foodProductCountry)
                 .font(.system(size: 12))
                 .foregroundStyle(.gray)
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -26,5 +28,5 @@ struct DescriptionView: View {
 }
 
 #Preview {
-    DescriptionView(food: Food.getExamples()[0])
+    DescriptionView(foodProductName: FoodProduct.getExamples()[0].name, foodProductCountry: FoodProduct.getExamples()[0].country)
 }
