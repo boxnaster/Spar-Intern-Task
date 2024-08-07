@@ -11,6 +11,8 @@
 		C7104B682C62439F00F87034 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7104B672C62439F00F87034 /* ContentView.swift */; };
 		C7104B6A2C6243A000F87034 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7104B692C6243A000F87034 /* Assets.xcassets */; };
 		C7104B6D2C6243A000F87034 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7104B6C2C6243A000F87034 /* Preview Assets.xcassets */; };
+		C7104B792C63A37100F87034 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7104B782C63A37100F87034 /* Food.swift */; };
+		C7104B7C2C63A92B00F87034 /* FoodListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7104B7B2C63A92B00F87034 /* FoodListCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		C7104B672C62439F00F87034 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C7104B692C6243A000F87034 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C7104B6C2C6243A000F87034 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C7104B782C63A37100F87034 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
+		C7104B7B2C63A92B00F87034 /* FoodListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,8 @@
 				C7104B672C62439F00F87034 /* ContentView.swift */,
 				C7104B692C6243A000F87034 /* Assets.xcassets */,
 				C7104B6B2C6243A000F87034 /* Preview Content */,
+				C7104B7A2C63A37600F87034 /* Models */,
+				C7104B7B2C63A92B00F87034 /* FoodListCell.swift */,
 			);
 			path = "Spar Intern Task";
 			sourceTree = "<group>";
@@ -65,6 +71,14 @@
 				C7104B6C2C6243A000F87034 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C7104B7A2C63A37600F87034 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C7104B782C63A37100F87034 /* Food.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +151,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7104B7C2C63A92B00F87034 /* FoodListCell.swift in Sources */,
 				C7104B682C62439F00F87034 /* ContentView.swift in Sources */,
+				C7104B792C63A37100F87034 /* Food.swift in Sources */,
 				C7104B662C62439F00F87034 /* Spar_Intern_TaskApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
