@@ -13,6 +13,10 @@ struct CardContentListView: View {
     let foodProduct: FoodProduct
     let onAddToCart: () -> Void
     let onRemoveFromCart: () -> Void
+    let isFavorite: Bool
+    let toggleFavorite: () -> Void
+    let isInShopList: Bool
+    let toggleShopList: () -> Void
 
     var body: some View {
         VStack(alignment: .leading) {
@@ -21,7 +25,7 @@ struct CardContentListView: View {
                     RatingListView(foodProductRating: foodProduct.rating, foodProductReviewsCount: foodProduct.reviewsCount)
                     DescriptionListView(foodProductName: foodProduct.name, foodProductCountry: foodProduct.country)
                 }
-                ActionListView(isInTheShopList: foodProduct.isInTheShopList, isFavorite: foodProduct.isFavorite)
+                ActionListView(isFavorite: isFavorite, toggleFavorite: toggleFavorite, isInShopList: isInShopList, toggleShopList: toggleShopList)
             }
             Spacer()
             if cardContentViewModel.isProductAddedToCart {
@@ -45,5 +49,5 @@ struct CardContentListView: View {
 }
 
 #Preview {
-    CardContentListView(foodProduct: FoodProduct(id: UUID(), name: "Огурцы тепличные садово-огородные 500гр", image: Image("cucumbers"), isFavorite: true, isInTheShopList: false, rating: 3.0, reviewsCount: 12, price: 199.90,         oldPrice: 210.10, discount: 50, badge: Badge(text: "Новинки", color: Color(red: 122/255, green: 121/255, blue: 186/255, opacity: 0.9)), quantityType: QuantityType(title: "Кг", step: 0.1)), onAddToCart: { }, onRemoveFromCart: { })
+    CardContentListView(foodProduct: FoodProduct(id: UUID(), name: "Огурцы тепличные садово-огородные 500гр", image: Image("cucumbers"), rating: 3.0, reviewsCount: 12, price: 199.90, oldPrice: 210.10, discount: 50, badge: Badge(text: "Новинки", color: Color(red: 122/255, green: 121/255, blue: 186/255, opacity: 0.9)), quantityType: QuantityType(title: "Кг", step: 0.1)), onAddToCart: { }, onRemoveFromCart: { }, isFavorite: true, toggleFavorite: { }, isInShopList: true, toggleShopList: { })
 }

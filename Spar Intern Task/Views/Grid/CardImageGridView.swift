@@ -12,9 +12,11 @@ struct CardImageGridView: View {
     let foodProductImage: Image
     let foodProductRating: Float
     let foodProductBadge: Badge?
-    let isInTheShopList: Bool
     let isFavorite: Bool
     let foodProductDiscount: Int?
+    let toggleFavorite: () -> Void
+    let isInShopList: Bool
+    let toggleShopList: () -> Void
 
     var body: some View {
         ZStack {
@@ -33,7 +35,7 @@ struct CardImageGridView: View {
                 RoundedRectangle(cornerRadius: 40)
                     .frame(width: 32, height: 64)
                     .foregroundColor(Color(red: 1, green: 1, blue: 1, opacity: 0.9))
-                ActionListView(isInTheShopList: isInTheShopList, isFavorite: isFavorite)
+                ActionListView(isFavorite: isFavorite, toggleFavorite: toggleFavorite, isInShopList: isInShopList, toggleShopList: toggleShopList)
             }
             .frame(maxWidth: 168, maxHeight: .infinity, alignment: .topTrailing)
             if let discount = foodProductDiscount {
@@ -48,5 +50,5 @@ struct CardImageGridView: View {
 }
 
 #Preview {
-    CardImageGridView(foodProductImage: Image("cucumbers"), foodProductRating: 3.2, foodProductBadge: Badge(text: "Новинки", color: .purple), isInTheShopList: true, isFavorite: true, foodProductDiscount: 90)
+    CardImageGridView(foodProductImage: Image("cucumbers"), foodProductRating: 3.2, foodProductBadge: Badge(text: "Новинки", color: .purple), isFavorite: true, foodProductDiscount: 90, toggleFavorite: { }, isInShopList: true, toggleShopList: { })
 }

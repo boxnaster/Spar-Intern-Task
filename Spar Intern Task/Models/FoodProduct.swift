@@ -12,8 +12,6 @@ struct FoodProduct: Identifiable, Hashable {
     var id: UUID
     var name: String
     var image: Image
-    var isFavorite: Bool
-    var isInTheShopList: Bool
     var rating: Float
     var reviewsCount: Int
     var price: Float

@@ -26,10 +26,14 @@ struct ContentView: View {
                             FoodCardListView(
                                 foodProduct: product,
                                 onAddToCart: { viewModel.addToCart(foodProductId: product.id) },
-                                onRemoveFromCart: { viewModel.removeFromCart(foodProductId: product.id)}
+                                onRemoveFromCart: { viewModel.removeFromCart(foodProductId: product.id)},
+                                isFavorite: viewModel.isFavorite(productId: product.id),
+                                toggleFavorite: {viewModel.toggleFavorite(productId: product.id)},
+                                isInShopList: viewModel.isInShopList(productId: product.id),
+                                toggleShopList: {viewModel.toggleShopList(productId: product.id)}
                             )
                             Divider()
-                            .padding(.bottom, 10)
+                                .padding(.bottom, 10)
                         }
                         .padding()
                     }
@@ -40,7 +44,11 @@ struct ContentView: View {
                                 FoodCardGridView(
                                     foodProduct: product,
                                     onAddToCart: { viewModel.addToCart(foodProductId: product.id) },
-                                    onRemoveFromCart: { viewModel.removeFromCart(foodProductId: product.id)}
+                                    onRemoveFromCart: { viewModel.removeFromCart(foodProductId: product.id)},
+                                    isFavorite: viewModel.isFavorite(productId: product.id),
+                                    toggleFavorite: {viewModel.toggleFavorite(productId: product.id)},
+                                    isInShopList: viewModel.isInShopList(productId: product.id),
+                                    toggleShopList: {viewModel.toggleShopList(productId: product.id)}
                                 )
                             }
                         }
