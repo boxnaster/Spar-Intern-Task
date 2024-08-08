@@ -15,7 +15,7 @@ struct AddToCartButtonView: View {
             ZStack {
                 RoundedRectangle(cornerRadius: 15)
                     .frame(width: 48, height: 36)
-                    .foregroundColor(.green)
+                    .foregroundColor(Color(red: 21/255, green: 183/255, blue: 66/255))
                 Image("cart")
             }
         })

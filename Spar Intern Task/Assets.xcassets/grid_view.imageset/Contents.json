@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "tiles_view.png",
+      "filename" : "grid_view.png",
       "idiom" : "universal",
       "scale" : "1x"
     },

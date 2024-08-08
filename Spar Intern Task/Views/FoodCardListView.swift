@@ -7,18 +7,18 @@
 
 import SwiftUI
 
-struct FoodCardView: View {
-    
+struct FoodCardListView: View {
+
     let foodProduct: FoodProduct
-    
+
     var body: some View {
         HStack {
-            CardImageView(foodProductImage: foodProduct.image, foodProductDiscount: foodProduct.discountInPercent,  foodProductBadge: foodProduct.badge)
+            CardImageView(foodProductImage: foodProduct.image, foodProductDiscount: foodProduct.discount,  foodProductBadge: foodProduct.badge)
             CardContentView(foodProduct: foodProduct)
         }
     }
 }
 
 #Preview {
-    FoodCardView(foodProduct: FoodProduct.getExamples()[2])
+    FoodCardListView(foodProduct: FoodProduct.getExamples()[2])
 }

@@ -10,31 +10,47 @@ import SwiftUI
 struct ContentView: View {
 
     @State private var foodProducts = FoodProduct.getExamples()
-    @State private var listContentStyle = true
+    @State private var isListView = true
+
+    let columns = [
+        GridItem(.flexible()),
+        GridItem(.flexible())
+    ]
 
     var body: some View {
         NavigationView {
-            List {
-                Section {
-                    ForEach(foodProducts) { product in
-                        FoodCardView(foodProduct: product)
-                            .listRowSeparator(.visible)
-                            .listRowSeparatorTint(.gray)
+            Group {
+                if isListView {
+                    List {
+                        ForEach(foodProducts) { product in
+                            FoodCardListView(foodProduct: product)
+                                .listRowSeparator(.visible)
+                                .listRowSeparatorTint(.gray)
+                        }
+
+                    }
+                    .listStyle(.plain)
+                } else {
+                    ScrollView {
+                        LazyVGrid(columns: columns, spacing: 20) {
+                            ForEach(foodProducts) { product in
+                                FoodCardGridView(foodProduct: product)
+                            }
+                        }
+                        .padding()
                     }
                 }
             }
-            .listStyle(.plain)
             .toolbar(content: {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button(action: {
-                        listContentStyle.toggle()
-                        //TODO: change the list style
+                        isListView.toggle()
                     }, label: {
                         ZStack {
                             RoundedRectangle(cornerRadius: 10)
                                 .frame(width: 36, height: 36)
                                 .foregroundColor(Color(red: 241/255, green: 241/255, blue: 241/255))
-                            Image("list_view")
+                            Image(isListView ? "list_view" : "grid_view")
                         }
                     })
                 }
@@ -42,6 +58,7 @@ struct ContentView: View {
         }
     }
 }
+
 
 #Preview {
     ContentView()

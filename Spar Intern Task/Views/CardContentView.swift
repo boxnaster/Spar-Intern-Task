@@ -15,7 +15,7 @@ struct CardContentView: View {
         VStack(alignment: .leading) {
             HStack(alignment: .top) {
                 VStack(alignment: .leading) {
-                    RatingView(foodProductRating: foodProduct.raiting, foodProductReviewsCount: foodProduct.reviewsCount)
+                    RatingView(foodProductRating: foodProduct.rating, foodProductReviewsCount: foodProduct.reviewsCount)
                     DescriptionView(foodProductName: foodProduct.name, foodProductCountry: foodProduct.country)
                 }
                 ActionListView(isInTheShopList: foodProduct.isInTheShopList, isFavorite: foodProduct.isFavorite)
