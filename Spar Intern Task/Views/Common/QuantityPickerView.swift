@@ -11,6 +11,7 @@ struct QuantityPickerView: View {
     
     let onAddToCart: () -> Void
     let onRemoveFromCart: () -> Void
+    let getProductQuantityInCart: () -> Int
 
     var body: some View {
         ZStack {
@@ -27,7 +28,7 @@ struct QuantityPickerView: View {
                 .padding(.horizontal, 10)
                 Spacer()
                 VStack(alignment: .center) {
-                    Text("1 кг")
+                    Text(String(getProductQuantityInCart()))
                         .font(.system(size: 16))
                         .bold()
                         .foregroundStyle(.white)
@@ -49,5 +50,5 @@ struct QuantityPickerView: View {
 }
 
 #Preview {
-    QuantityPickerView(onAddToCart: { }, onRemoveFromCart: { })
+    QuantityPickerView(onAddToCart: { }, onRemoveFromCart: { }, getProductQuantityInCart: { return 2 })
 }

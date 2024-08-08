@@ -9,7 +9,6 @@ import SwiftUI
 
 struct CardContentListView: View {
 
-    @StateObject private var cardContentViewModel = CardContentViewModel()
     let foodProduct: FoodProduct
     let onAddToCart: () -> Void
     let onRemoveFromCart: () -> Void
@@ -17,6 +16,8 @@ struct CardContentListView: View {
     let toggleFavorite: () -> Void
     let isInShopList: Bool
     let toggleShopList: () -> Void
+    let isInCart: () -> Bool
+    let getProductQuantityInCart: () -> Int
 
     var body: some View {
         VStack(alignment: .leading) {
@@ -28,26 +29,21 @@ struct CardContentListView: View {
                 ActionListView(isFavorite: isFavorite, toggleFavorite: toggleFavorite, isInShopList: isInShopList, toggleShopList: toggleShopList)
             }
             Spacer()
-            if cardContentViewModel.isProductAddedToCart {
+            if isInCart() {
                 QuantityTypePickerView()
-                QuantityPickerView(onAddToCart: onAddToCart, onRemoveFromCart: onRemoveFromCart)
+                QuantityPickerView(onAddToCart: onAddToCart, onRemoveFromCart: onRemoveFromCart, getProductQuantityInCart: getProductQuantityInCart)
             } else {
                 HStack() {
                     PriceView(foodProductPrice: foodProduct.price, foodProductOldPrice: foodProduct.oldPrice)
                     Spacer()
-                    AddToCartButtonView(foodProductId: foodProduct.id, onAddToCart: addToCart)
+                    AddToCartButtonView(foodProductId: foodProduct.id, onAddToCart: onAddToCart)
                 }
             }
         }
         .frame(maxWidth: .infinity, maxHeight: 144)
     }
-
-    func addToCart() {
-        onAddToCart()
-        cardContentViewModel.toggleMode()
-    }
 }
 
 #Preview {
-    CardContentListView(foodProduct: FoodProduct(id: UUID(), name: "Огурцы тепличные садово-огородные 500гр", image: Image("cucumbers"), rating: 3.0, reviewsCount: 12, price: 199.90, oldPrice: 210.10, discount: 50, badge: Badge(text: "Новинки", color: Color(red: 122/255, green: 121/255, blue: 186/255, opacity: 0.9)), quantityType: QuantityType(title: "Кг", step: 0.1)), onAddToCart: { }, onRemoveFromCart: { }, isFavorite: true, toggleFavorite: { }, isInShopList: true, toggleShopList: { })
+    CardContentListView(foodProduct: FoodProduct(id: UUID(), name: "Огурцы тепличные садово-огородные 500гр", image: Image("cucumbers"), rating: 3.0, reviewsCount: 12, price: 199.90, oldPrice: 210.10, discount: 50, badge: Badge(text: "Новинки", color: Color(red: 122/255, green: 121/255, blue: 186/255, opacity: 0.9)), quantityType: QuantityType(title: "Кг", step: 0.1)), onAddToCart: { }, onRemoveFromCart: { }, isFavorite: true, toggleFavorite: { }, isInShopList: true, toggleShopList: { }, isInCart: {return true}, getProductQuantityInCart: {return 4})
 }

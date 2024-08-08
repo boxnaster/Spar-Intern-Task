@@ -9,7 +9,6 @@ import SwiftUI
 
 struct CardContentGridView: View {
 
-    @StateObject private var cardContentViewModel = CardContentViewModel()
     let foodProductId: UUID
     let foodProductName: String
     let foodProductCountry: String?
@@ -17,31 +16,29 @@ struct CardContentGridView: View {
     let foodProductOldPrice: Float?
     let onAddToCart: () -> Void
     let onRemoveFromCart: () -> Void
+    let isInCart: () -> Bool
+    let getProductQuantityInCart: () -> Int
 
     var body: some View {
         VStack(alignment: .leading) {
             DescriptionListView(foodProductName: foodProductName, foodProductCountry: foodProductCountry)
             Spacer()
-            if cardContentViewModel.isProductAddedToCart {
+            if isInCart() {
                 QuantityTypePickerView()
                 Spacer()
-                QuantityPickerView(onAddToCart: onAddToCart, onRemoveFromCart: onRemoveFromCart)
+                QuantityPickerView(onAddToCart: onAddToCart, onRemoveFromCart: onRemoveFromCart, getProductQuantityInCart: getProductQuantityInCart)
             } else {
                 HStack(alignment: .bottom) {
                     PriceView(foodProductPrice: foodProductPrice, foodProductOldPrice: foodProductOldPrice)
                     Spacer()
-                    AddToCartButtonView(foodProductId: foodProductId, onAddToCart: addToCart)
+                    AddToCartButtonView(foodProductId: foodProductId, onAddToCart: onAddToCart)
                 }
             }
         }
-    }
-    func addToCart() {
-        onAddToCart()
-        cardContentViewModel.toggleMode()
     }
 }
 
 
 #Preview {
-    CardContentGridView(foodProductId: UUID(), foodProductName: "Яблоки красные", foodProductCountry: "Азербайджан", foodProductPrice: 67.20, foodProductOldPrice: 74.10, onAddToCart: { }, onRemoveFromCart: { })
+    CardContentGridView(foodProductId: UUID(), foodProductName: "Яблоки красные", foodProductCountry: "Азербайджан", foodProductPrice: 67.20, foodProductOldPrice: 74.10, onAddToCart: { }, onRemoveFromCart: { }, isInCart: {return true}, getProductQuantityInCart: {return 3})
 }

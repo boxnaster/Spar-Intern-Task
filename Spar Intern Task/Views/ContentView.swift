@@ -30,7 +30,9 @@ struct ContentView: View {
                                 isFavorite: viewModel.isFavorite(productId: product.id),
                                 toggleFavorite: {viewModel.toggleFavorite(productId: product.id)},
                                 isInShopList: viewModel.isInShopList(productId: product.id),
-                                toggleShopList: {viewModel.toggleShopList(productId: product.id)}
+                                toggleShopList: {viewModel.toggleShopList(productId: product.id)},
+                                isInCart: {viewModel.isInCart(productId: product.id)},
+                                getProductQuantityInCart: {viewModel.getProductQuantityInCart(productId: product.id)}
                             )
                             Divider()
                                 .padding(.bottom, 10)
@@ -48,7 +50,9 @@ struct ContentView: View {
                                     isFavorite: viewModel.isFavorite(productId: product.id),
                                     toggleFavorite: {viewModel.toggleFavorite(productId: product.id)},
                                     isInShopList: viewModel.isInShopList(productId: product.id),
-                                    toggleShopList: {viewModel.toggleShopList(productId: product.id)}
+                                    toggleShopList: {viewModel.toggleShopList(productId: product.id)},
+                                    isInCart: {viewModel.isInCart(productId: product.id)},
+                                    getProductQuantityInCart: {viewModel.getProductQuantityInCart(productId: product.id)}
                                 )
                             }
                         }

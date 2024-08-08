@@ -65,4 +65,20 @@ class FoodProductViewModel: ObservableObject {
     func isInShopList(productId: UUID) -> Bool {
         return shopList.contains(productId)
     }
+
+    func isInCart(productId: UUID) -> Bool {
+        if let value = cart[productId], value > 0 {
+            return true
+        } else {
+            return false
+        }
+    }
+
+    func getProductQuantityInCart(productId: UUID) -> Int {
+        if let productQuantity = cart[productId] {
+            return productQuantity
+        } else {
+            return 0
+        }
+    }
 }
