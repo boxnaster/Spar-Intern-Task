@@ -9,6 +9,7 @@ import SwiftUI
 
 struct QuantityPickerView: View {
     
+    let price: Decimal
     let onAddToCart: () -> Void
     let onRemoveFromCart: () -> Void
     let getProductQuantityInCart: () -> Int
@@ -24,6 +25,7 @@ struct QuantityPickerView: View {
                 }, label: {
                     Image(systemName: "minus")
                         .foregroundColor(.white)
+                        .bold()
                 })
                 .padding(.horizontal, 10)
                 Spacer()
@@ -32,7 +34,9 @@ struct QuantityPickerView: View {
                         .font(.system(size: 16))
                         .bold()
                         .foregroundStyle(.white)
-                    Text("~45₽")
+                    let result = price * Decimal(getProductQuantityInCart())
+                    let resultString = String(format: "%.2f", NSDecimalNumber(decimal: result).doubleValue)
+                    Text("\(resultString)₽")
                         .font(.system(size: 12))
                         .foregroundStyle(.white)
                 }
@@ -42,6 +46,7 @@ struct QuantityPickerView: View {
                 }, label: {
                     Image(systemName: "plus")
                         .foregroundColor(.white)
+                        .bold()
                 })
                 .padding(.horizontal, 10)
             }
@@ -50,5 +55,5 @@ struct QuantityPickerView: View {
 }
 
 #Preview {
-    QuantityPickerView(onAddToCart: { }, onRemoveFromCart: { }, getProductQuantityInCart: { return 2 })
+    QuantityPickerView(price: 199.90, onAddToCart: { }, onRemoveFromCart: { }, getProductQuantityInCart: { return 2 })
 }

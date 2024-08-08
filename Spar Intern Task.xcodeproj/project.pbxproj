@@ -24,7 +24,6 @@
 		C7104B8F2C641B7600F87034 /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7104B8E2C641B7600F87034 /* Badge.swift */; };
 		C7104B912C6424AE00F87034 /* QuantityTypePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7104B902C6424AE00F87034 /* QuantityTypePickerView.swift */; };
 		C7104B932C64278D00F87034 /* QuantityPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7104B922C64278D00F87034 /* QuantityPickerView.swift */; };
-		C7104B952C642E2F00F87034 /* QuantityType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7104B942C642E2F00F87034 /* QuantityType.swift */; };
 		C7104B972C64EC4F00F87034 /* FoodCardGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7104B962C64EC4F00F87034 /* FoodCardGridView.swift */; };
 		C7104B992C64ECCC00F87034 /* CardImageGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7104B982C64ECCC00F87034 /* CardImageGridView.swift */; };
 		C7104B9B2C64F23100F87034 /* CardContentGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7104B9A2C64F23100F87034 /* CardContentGridView.swift */; };
@@ -50,7 +49,6 @@
 		C7104B8E2C641B7600F87034 /* Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
 		C7104B902C6424AE00F87034 /* QuantityTypePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuantityTypePickerView.swift; sourceTree = "<group>"; };
 		C7104B922C64278D00F87034 /* QuantityPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuantityPickerView.swift; sourceTree = "<group>"; };
-		C7104B942C642E2F00F87034 /* QuantityType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuantityType.swift; sourceTree = "<group>"; };
 		C7104B962C64EC4F00F87034 /* FoodCardGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCardGridView.swift; sourceTree = "<group>"; };
 		C7104B982C64ECCC00F87034 /* CardImageGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardImageGridView.swift; sourceTree = "<group>"; };
 		C7104B9A2C64F23100F87034 /* CardContentGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardContentGridView.swift; sourceTree = "<group>"; };
@@ -110,7 +108,6 @@
 			children = (
 				C7104B782C63A37100F87034 /* FoodProduct.swift */,
 				C7104B8E2C641B7600F87034 /* Badge.swift */,
-				C7104B942C642E2F00F87034 /* QuantityType.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -256,7 +253,6 @@
 				C7104B9D2C6513AA00F87034 /* FoodProductViewModel.swift in Sources */,
 				C7104B8A2C6400A400F87034 /* CardContentListView.swift in Sources */,
 				C7104B8F2C641B7600F87034 /* Badge.swift in Sources */,
-				C7104B952C642E2F00F87034 /* QuantityType.swift in Sources */,
 				C7104B992C64ECCC00F87034 /* CardImageGridView.swift in Sources */,
 				C7104B662C62439F00F87034 /* Spar_Intern_TaskApp.swift in Sources */,
 			);

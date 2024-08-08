@@ -29,5 +29,5 @@ struct FoodCardGridView: View {
 }
 
 #Preview {
-    FoodCardGridView(foodProduct: FoodProduct(id: UUID(), name: "Огурцы тепличные садово-огородные 500гр", image: Image("cucumbers"), rating: 3.0, reviewsCount: 12, price: 199.90,           oldPrice: 210.10, discount: 50, badge: Badge(text: "Новинки", color: Color(red: 122/255, green: 121/255, blue: 186/255, opacity: 0.9)), quantityType: QuantityType(title: "Кг", step: 0.1)), onAddToCart: { }, onRemoveFromCart: { }, isFavorite: true, toggleFavorite: { }, isInShopList: false, toggleShopList: { }, isInCart: {return true}, getProductQuantityInCart: {return 1})
+    FoodCardGridView(foodProduct: FoodProduct(id: UUID(), name: "Огурцы тепличные садово-огородные 500гр", image: Image("cucumbers"), rating: 3.0, reviewsCount: 12, price: 199.90,           oldPrice: 210.10, discount: 50, badge: Badge(text: "Новинки", color: Color(red: 122/255, green: 121/255, blue: 186/255, opacity: 0.9))), onAddToCart: { }, onRemoveFromCart: { }, isFavorite: true, toggleFavorite: { }, isInShopList: false, toggleShopList: { }, isInCart: {return true}, getProductQuantityInCart: {return 1})
 }

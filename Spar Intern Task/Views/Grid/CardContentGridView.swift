@@ -12,8 +12,8 @@ struct CardContentGridView: View {
     let foodProductId: UUID
     let foodProductName: String
     let foodProductCountry: String?
-    let foodProductPrice: Float
-    let foodProductOldPrice: Float?
+    let foodProductPrice: Decimal
+    let foodProductOldPrice: Decimal?
     let onAddToCart: () -> Void
     let onRemoveFromCart: () -> Void
     let isInCart: () -> Bool
@@ -26,7 +26,7 @@ struct CardContentGridView: View {
             if isInCart() {
                 QuantityTypePickerView()
                 Spacer()
-                QuantityPickerView(onAddToCart: onAddToCart, onRemoveFromCart: onRemoveFromCart, getProductQuantityInCart: getProductQuantityInCart)
+                QuantityPickerView(price: foodProductPrice, onAddToCart: onAddToCart, onRemoveFromCart: onRemoveFromCart, getProductQuantityInCart: getProductQuantityInCart)
             } else {
                 HStack(alignment: .bottom) {
                     PriceView(foodProductPrice: foodProductPrice, foodProductOldPrice: foodProductOldPrice)

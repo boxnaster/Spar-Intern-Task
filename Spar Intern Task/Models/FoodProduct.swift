@@ -14,12 +14,11 @@ struct FoodProduct: Identifiable, Hashable {
     var image: Image
     var rating: Float
     var reviewsCount: Int
-    var price: Float
-    var oldPrice: Float?
+    var price: Decimal
+    var oldPrice: Decimal?
     var country: String?
     var discount: Int?
     var badge: Badge?
-    var quantityType: QuantityType
 
     static func == (lhs: FoodProduct, rhs: FoodProduct) -> Bool {
         return lhs.id == rhs.id

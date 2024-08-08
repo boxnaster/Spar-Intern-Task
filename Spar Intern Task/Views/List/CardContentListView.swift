@@ -31,7 +31,7 @@ struct CardContentListView: View {
             Spacer()
             if isInCart() {
                 QuantityTypePickerView()
-                QuantityPickerView(onAddToCart: onAddToCart, onRemoveFromCart: onRemoveFromCart, getProductQuantityInCart: getProductQuantityInCart)
+                QuantityPickerView(price: foodProduct.price, onAddToCart: onAddToCart, onRemoveFromCart: onRemoveFromCart, getProductQuantityInCart: getProductQuantityInCart)
             } else {
                 HStack() {
                     PriceView(foodProductPrice: foodProduct.price, foodProductOldPrice: foodProduct.oldPrice)
@@ -45,5 +45,5 @@ struct CardContentListView: View {
 }
 
 #Preview {
-    CardContentListView(foodProduct: FoodProduct(id: UUID(), name: "Огурцы тепличные садово-огородные 500гр", image: Image("cucumbers"), rating: 3.0, reviewsCount: 12, price: 199.90, oldPrice: 210.10, discount: 50, badge: Badge(text: "Новинки", color: Color(red: 122/255, green: 121/255, blue: 186/255, opacity: 0.9)), quantityType: QuantityType(title: "Кг", step: 0.1)), onAddToCart: { }, onRemoveFromCart: { }, isFavorite: true, toggleFavorite: { }, isInShopList: true, toggleShopList: { }, isInCart: {return true}, getProductQuantityInCart: {return 4})
+    CardContentListView(foodProduct: FoodProduct(id: UUID(), name: "Огурцы тепличные садово-огородные 500гр", image: Image("cucumbers"), rating: 3.0, reviewsCount: 12, price: 199.90, oldPrice: 210.10, discount: 50, badge: Badge(text: "Новинки", color: Color(red: 122/255, green: 121/255, blue: 186/255, opacity: 0.9))), onAddToCart: { }, onRemoveFromCart: { }, isFavorite: true, toggleFavorite: { }, isInShopList: true, toggleShopList: { }, isInCart: {return true}, getProductQuantityInCart: {return 4})
 }
