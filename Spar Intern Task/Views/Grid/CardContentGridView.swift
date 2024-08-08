@@ -9,12 +9,12 @@ import SwiftUI
 
 struct CardContentGridView: View {
 
+    @StateObject private var cardContentViewModel = CardContentViewModel()
     let foodProductId: UUID
     let foodProductName: String
     let foodProductCountry: String?
     let foodProductPrice: Float
     let foodProductOldPrice: Float?
-    let foodProductIsSoldByWeight: Bool
     let onAddToCart: () -> Void
     let onRemoveFromCart: () -> Void
 
@@ -22,7 +22,7 @@ struct CardContentGridView: View {
         VStack(alignment: .leading) {
             DescriptionListView(foodProductName: foodProductName, foodProductCountry: foodProductCountry)
             Spacer()
-            if foodProductIsSoldByWeight {
+            if cardContentViewModel.isProductAddedToCart {
                 QuantityTypePickerView()
                 Spacer()
                 QuantityPickerView(onAddToCart: onAddToCart, onRemoveFromCart: onRemoveFromCart)
@@ -30,14 +30,18 @@ struct CardContentGridView: View {
                 HStack(alignment: .bottom) {
                     PriceView(foodProductPrice: foodProductPrice, foodProductOldPrice: foodProductOldPrice)
                     Spacer()
-                    AddToCartButtonView(foodProductId: foodProductId, onAddToCart: onAddToCart)
+                    AddToCartButtonView(foodProductId: foodProductId, onAddToCart: addToCart)
                 }
             }
         }
+    }
+    func addToCart() {
+        onAddToCart()
+        cardContentViewModel.toggleMode()
     }
 }
 
 
 #Preview {
-    CardContentGridView(foodProductId: UUID(), foodProductName: "Яблоки красные", foodProductCountry: "Азербайджан", foodProductPrice: 67.20, foodProductOldPrice: 74.10, foodProductIsSoldByWeight: true, onAddToCart: { }, onRemoveFromCart: { })
+    CardContentGridView(foodProductId: UUID(), foodProductName: "Яблоки красные", foodProductCountry: "Азербайджан", foodProductPrice: 67.20, foodProductOldPrice: 74.10, onAddToCart: { }, onRemoveFromCart: { })
 }

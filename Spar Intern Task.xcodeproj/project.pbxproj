@@ -29,6 +29,7 @@
 		C7104B992C64ECCC00F87034 /* CardImageGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7104B982C64ECCC00F87034 /* CardImageGridView.swift */; };
 		C7104B9B2C64F23100F87034 /* CardContentGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7104B9A2C64F23100F87034 /* CardContentGridView.swift */; };
 		C7104B9D2C6513AA00F87034 /* FoodProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7104B9C2C6513AA00F87034 /* FoodProductViewModel.swift */; };
+		C7ACE8B02C6557F1003A1988 /* CardContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7ACE8AF2C6557F1003A1988 /* CardContentViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		C7104B982C64ECCC00F87034 /* CardImageGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardImageGridView.swift; sourceTree = "<group>"; };
 		C7104B9A2C64F23100F87034 /* CardContentGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardContentGridView.swift; sourceTree = "<group>"; };
 		C7104B9C2C6513AA00F87034 /* FoodProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodProductViewModel.swift; sourceTree = "<group>"; };
+		C7ACE8AF2C6557F1003A1988 /* CardContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardContentViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				C7104B9C2C6513AA00F87034 /* FoodProductViewModel.swift */,
+				C7ACE8AF2C6557F1003A1988 /* CardContentViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 				C7104B9B2C64F23100F87034 /* CardContentGridView.swift in Sources */,
 				C7104B7E2C63FBF100F87034 /* RatingListView.swift in Sources */,
 				C7104B932C64278D00F87034 /* QuantityPickerView.swift in Sources */,
+				C7ACE8B02C6557F1003A1988 /* CardContentViewModel.swift in Sources */,
 				C7104B862C63FF5C00F87034 /* AddToCartButtonView.swift in Sources */,
 				C7104B792C63A37100F87034 /* FoodProduct.swift in Sources */,
 				C7104B9D2C6513AA00F87034 /* FoodProductViewModel.swift in Sources */,

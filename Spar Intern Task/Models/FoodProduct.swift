@@ -16,7 +16,6 @@ struct FoodProduct: Identifiable, Hashable {
     var isInTheShopList: Bool
     var rating: Float
     var reviewsCount: Int
-    var isSoldByWeight: Bool
     var price: Float
     var oldPrice: Float?
     var country: String?
