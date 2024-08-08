@@ -25,23 +25,22 @@ struct ContentView: View {
                         ForEach(viewModel.foodProducts) { product in
                             FoodCardListView(
                                 foodProduct: product,
-                                onAddToCart: { addToCart(foodProductId: product.id) },
-                                onRemoveFromCart: { removeFromCart(foodProductId: product.id)}
+                                onAddToCart: { viewModel.addToCart(foodProductId: product.id) },
+                                onRemoveFromCart: { viewModel.removeFromCart(foodProductId: product.id)}
                             )
                             Divider()
                             .padding(.bottom, 10)
                         }
                         .padding()
                     }
-                    .listStyle(.plain)
                 } else {
                     ScrollView {
                         LazyVGrid(columns: columns, spacing: 20) {
                             ForEach(viewModel.foodProducts) { product in
                                 FoodCardGridView(
                                     foodProduct: product,
-                                    onAddToCart: { addToCart(foodProductId: product.id) },
-                                    onRemoveFromCart: { removeFromCart(foodProductId: product.id)}
+                                    onAddToCart: { viewModel.addToCart(foodProductId: product.id) },
+                                    onRemoveFromCart: { viewModel.removeFromCart(foodProductId: product.id)}
                                 )
                             }
                         }
@@ -75,18 +74,7 @@ struct ContentView: View {
             })
         }
     }
-
-    private func addToCart(foodProductId: UUID) {
-        viewModel.addToCart(foodProductId: foodProductId)
-    }
-
-    private func removeFromCart(foodProductId: UUID) {
-        viewModel.removeFromCart(foodProductId: foodProductId)
-    }
 }
-
-
-
 
 #Preview {
     ContentView()

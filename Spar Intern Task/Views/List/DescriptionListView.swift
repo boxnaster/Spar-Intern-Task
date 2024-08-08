@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct DescriptionView: View {
+struct DescriptionListView: View {
 
     let foodProductName: String
     let foodProductCountry: String?
@@ -30,5 +30,5 @@ struct DescriptionView: View {
 }
 
 #Preview {
-    DescriptionView(foodProductName: "Картофель свежий", foodProductCountry: "Россия")
+    DescriptionListView(foodProductName: "Картофель свежий", foodProductCountry: "Россия")
 }

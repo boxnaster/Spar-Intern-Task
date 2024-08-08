@@ -15,8 +15,8 @@ struct FoodCardListView: View {
 
     var body: some View {
         HStack {
-            CardImageView(foodProductImage: foodProduct.image, foodProductDiscount: foodProduct.discount,  foodProductBadge: foodProduct.badge)
-            CardContentView(foodProduct: foodProduct, onAddToCart: onAddToCart, onRemoveFromCart: onRemoveFromCart)
+            CardImageListView(foodProductImage: foodProduct.image, foodProductDiscount: foodProduct.discount,  foodProductBadge: foodProduct.badge)
+            CardContentListView(foodProduct: foodProduct, onAddToCart: onAddToCart, onRemoveFromCart: onRemoveFromCart)
         }
     }
 }

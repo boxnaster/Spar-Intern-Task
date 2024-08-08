@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct RatingView: View {
+struct RatingListView: View {
     
     let foodProductRating: Float
     let foodProductReviewsCount: Int
@@ -25,5 +25,5 @@ struct RatingView: View {
 }
 
 #Preview {
-    RatingView(foodProductRating: 4.5, foodProductReviewsCount: 24)
+    RatingListView(foodProductRating: 4.5, foodProductReviewsCount: 24)
 }

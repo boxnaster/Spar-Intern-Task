@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CardImageView: View {
+struct CardImageListView: View {
 
     let foodProductImage: Image
     let foodProductDiscount: Int?
@@ -34,5 +34,5 @@ struct CardImageView: View {
 }
 
 #Preview {
-    CardImageView(foodProductImage: Image("cucumbers"), foodProductDiscount: 20, foodProductBadge: Badge(text: "Новинки", color: .purple))
+    CardImageListView(foodProductImage: Image("cucumbers"), foodProductDiscount: 20, foodProductBadge: Badge(text: "Новинки", color: .purple))
 }

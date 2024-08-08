@@ -20,7 +20,7 @@ struct CardContentGridView: View {
 
     var body: some View {
         VStack(alignment: .leading) {
-            DescriptionView(foodProductName: foodProductName, foodProductCountry: foodProductCountry)
+            DescriptionListView(foodProductName: foodProductName, foodProductCountry: foodProductCountry)
             Spacer()
             if foodProductIsSoldByWeight {
                 QuantityTypePickerView()
