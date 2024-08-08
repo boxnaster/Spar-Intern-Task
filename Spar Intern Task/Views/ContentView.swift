@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
 
-    @State private var foodProducts = FoodProduct.getExamples()
+    @StateObject private var viewModel = FoodProductViewModel()
     @State private var isListView = true
 
     let columns = [
@@ -21,20 +21,28 @@ struct ContentView: View {
         NavigationView {
             Group {
                 if isListView {
-                    List {
-                        ForEach(foodProducts) { product in
-                            FoodCardListView(foodProduct: product)
-                                .listRowSeparator(.visible)
-                                .listRowSeparatorTint(.gray)
+                    ScrollView {
+                        ForEach(viewModel.foodProducts) { product in
+                            FoodCardListView(
+                                foodProduct: product,
+                                onAddToCart: { addToCart(foodProductId: product.id) },
+                                onRemoveFromCart: { removeFromCart(foodProductId: product.id)}
+                            )
+                            Divider()
+                            .padding(.bottom, 10)
                         }
-
+                        .padding()
                     }
                     .listStyle(.plain)
                 } else {
                     ScrollView {
                         LazyVGrid(columns: columns, spacing: 20) {
-                            ForEach(foodProducts) { product in
-                                FoodCardGridView(foodProduct: product)
+                            ForEach(viewModel.foodProducts) { product in
+                                FoodCardGridView(
+                                    foodProduct: product,
+                                    onAddToCart: { addToCart(foodProductId: product.id) },
+                                    onRemoveFromCart: { removeFromCart(foodProductId: product.id)}
+                                )
                             }
                         }
                         .padding()
@@ -54,10 +62,30 @@ struct ContentView: View {
                         }
                     })
                 }
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    HStack {
+                        Image(systemName: "cart")
+                            .foregroundColor(.green)
+                            .bold()
+                        Text("\(viewModel.totalItemsInCart())")
+                            .foregroundStyle(.green)
+                            .bold()
+                    }
+                }
             })
         }
     }
+
+    private func addToCart(foodProductId: UUID) {
+        viewModel.addToCart(foodProductId: foodProductId)
+    }
+
+    private func removeFromCart(foodProductId: UUID) {
+        viewModel.removeFromCart(foodProductId: foodProductId)
+    }
 }
+
+
 
 
 #Preview {

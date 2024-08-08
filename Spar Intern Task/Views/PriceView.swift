@@ -31,5 +31,5 @@ struct PriceView: View {
 }
 
 #Preview {
-    PriceView(foodProductPrice: FoodProduct.getExamples()[0].price, foodProductOldPrice: FoodProduct.getExamples()[0].oldPrice)
+    PriceView(foodProductPrice: 199.90, foodProductOldPrice: 230.90)
 }

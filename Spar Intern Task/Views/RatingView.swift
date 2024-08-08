@@ -25,5 +25,5 @@ struct RatingView: View {
 }
 
 #Preview {
-    RatingView(foodProductRating: FoodProduct.getExamples()[0].rating, foodProductReviewsCount: FoodProduct.getExamples()[0].reviewsCount)
+    RatingView(foodProductRating: 4.5, foodProductReviewsCount: 24)
 }

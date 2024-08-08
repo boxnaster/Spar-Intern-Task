@@ -7,10 +7,16 @@
 
 import SwiftUI
 
+
 struct AddToCartButtonView: View {
+
+    @StateObject private var viewModel = FoodProductViewModel()
+    let foodProductId: UUID
+    let onAddToCart: () -> Void
+
     var body: some View {
         Button(action: {
-            //TODO: add the item to the cart
+            onAddToCart()
         }, label: {
             ZStack {
                 RoundedRectangle(cornerRadius: 15)
@@ -23,5 +29,5 @@ struct AddToCartButtonView: View {
 }
 
 #Preview {
-    AddToCartButtonView()
+    AddToCartButtonView(foodProductId: UUID(), onAddToCart: {})
 }

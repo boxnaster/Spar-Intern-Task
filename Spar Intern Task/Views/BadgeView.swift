@@ -24,5 +24,5 @@ struct BadgeView: View {
 }
 
 #Preview {
-    BadgeView(badge: FoodProduct.getExamples()[0].badge!)
+    BadgeView(badge: Badge(text: "Новинки", color: .purple))
 }

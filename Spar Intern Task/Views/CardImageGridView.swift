@@ -48,5 +48,5 @@ struct CardImageGridView: View {
 }
 
 #Preview {
-    CardImageGridView(foodProductImage: FoodProduct.getExamples()[0].image, foodProductRating: FoodProduct.getExamples()[0].rating, foodProductBadge: FoodProduct.getExamples()[0].badge, isInTheShopList: FoodProduct.getExamples()[0].isInTheShopList, isFavorite: FoodProduct.getExamples()[0].isFavorite, foodProductDiscount: FoodProduct.getExamples()[0].discount)
+    CardImageGridView(foodProductImage: Image("cucumbers"), foodProductRating: 3.2, foodProductBadge: Badge(text: "Новинки", color: .purple), isInTheShopList: true, isFavorite: true, foodProductDiscount: 90)
 }

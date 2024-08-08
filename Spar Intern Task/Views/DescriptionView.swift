@@ -30,5 +30,5 @@ struct DescriptionView: View {
 }
 
 #Preview {
-    DescriptionView(foodProductName: FoodProduct.getExamples()[0].name, foodProductCountry: FoodProduct.getExamples()[0].country)
+    DescriptionView(foodProductName: "Картофель свежий", foodProductCountry: "Россия")
 }

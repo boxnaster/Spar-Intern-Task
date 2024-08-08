@@ -28,6 +28,7 @@
 		C7104B972C64EC4F00F87034 /* FoodCardGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7104B962C64EC4F00F87034 /* FoodCardGridView.swift */; };
 		C7104B992C64ECCC00F87034 /* CardImageGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7104B982C64ECCC00F87034 /* CardImageGridView.swift */; };
 		C7104B9B2C64F23100F87034 /* CardContentGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7104B9A2C64F23100F87034 /* CardContentGridView.swift */; };
+		C7104B9D2C6513AA00F87034 /* FoodProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7104B9C2C6513AA00F87034 /* FoodProductViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		C7104B962C64EC4F00F87034 /* FoodCardGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCardGridView.swift; sourceTree = "<group>"; };
 		C7104B982C64ECCC00F87034 /* CardImageGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardImageGridView.swift; sourceTree = "<group>"; };
 		C7104B9A2C64F23100F87034 /* CardContentGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardContentGridView.swift; sourceTree = "<group>"; };
+		C7104B9C2C6513AA00F87034 /* FoodProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodProductViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 				C7104B6B2C6243A000F87034 /* Preview Content */,
 				C7104B7A2C63A37600F87034 /* Models */,
 				C7104B8B2C64012F00F87034 /* Views */,
+				C7104B9E2C6513AF00F87034 /* ViewModels */,
 			);
 			path = "Spar Intern Task";
 			sourceTree = "<group>";
@@ -132,6 +135,14 @@
 				C7104B9A2C64F23100F87034 /* CardContentGridView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		C7104B9E2C6513AF00F87034 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				C7104B9C2C6513AA00F87034 /* FoodProductViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,6 +229,7 @@
 				C7104B932C64278D00F87034 /* QuantityPickerView.swift in Sources */,
 				C7104B862C63FF5C00F87034 /* AddToCartButtonView.swift in Sources */,
 				C7104B792C63A37100F87034 /* FoodProduct.swift in Sources */,
+				C7104B9D2C6513AA00F87034 /* FoodProductViewModel.swift in Sources */,
 				C7104B8A2C6400A400F87034 /* CardContentView.swift in Sources */,
 				C7104B8F2C641B7600F87034 /* Badge.swift in Sources */,
 				C7104B952C642E2F00F87034 /* QuantityType.swift in Sources */,

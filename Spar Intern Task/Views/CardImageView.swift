@@ -34,5 +34,5 @@ struct CardImageView: View {
 }
 
 #Preview {
-    CardImageView(foodProductImage: FoodProduct.getExamples()[0].image, foodProductDiscount: FoodProduct.getExamples()[0].discount, foodProductBadge: FoodProduct.getExamples()[0].badge)
+    CardImageView(foodProductImage: Image("cucumbers"), foodProductDiscount: 20, foodProductBadge: Badge(text: "Новинки", color: .purple))
 }

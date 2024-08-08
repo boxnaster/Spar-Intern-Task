@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct QuantityPickerView: View {
+    
+    let onAddToCart: () -> Void
+    let onRemoveFromCart: () -> Void
+
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 40)
@@ -15,7 +19,7 @@ struct QuantityPickerView: View {
                 .foregroundColor(Color(red: 21/255, green: 183/255, blue: 66/255))
             HStack {
                 Button(action: {
-                    //TODO: decrease quantity
+                    onRemoveFromCart()
                 }, label: {
                     Image(systemName: "minus")
                         .foregroundColor(.white)
@@ -23,7 +27,7 @@ struct QuantityPickerView: View {
                 .padding(.horizontal, 10)
                 Spacer()
                 VStack(alignment: .center) {
-                    Text("0.1 кг")
+                    Text("1 кг")
                         .font(.system(size: 16))
                         .bold()
                         .foregroundStyle(.white)
@@ -33,7 +37,7 @@ struct QuantityPickerView: View {
                 }
                 Spacer()
                 Button(action: {
-                    //TODO: increase quantity
+                    onAddToCart()
                 }, label: {
                     Image(systemName: "plus")
                         .foregroundColor(.white)
@@ -45,5 +49,5 @@ struct QuantityPickerView: View {
 }
 
 #Preview {
-    QuantityPickerView()
+    QuantityPickerView(onAddToCart: { }, onRemoveFromCart: { })
 }

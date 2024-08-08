@@ -33,5 +33,5 @@ struct ActionListView: View {
 }
 
 #Preview {
-    ActionListView(isInTheShopList: FoodProduct.getExamples()[0].isInTheShopList, isFavorite: FoodProduct.getExamples()[0].isFavorite)
+    ActionListView(isInTheShopList: true, isFavorite: true)
 }
